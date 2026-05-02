@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java - Learn Java Basics</title>
+    <link rel="stylesheet" href="java_css.css">
+</head>
+<body>
+    <div class="app-container">
+        
+        <!-- HOME PAGE -->
+        <div id="home" class="page active">
+            <div class="header-cute">
+                <div class="mascot">☕</div>
+                <h1>Java</h1>
+                <p class="subtitle">Your Java learning buddy!</p>
+            </div>
+            
+            <div class="content">
+                <div class="welcome-box">
+                    <h2>🌟 Welcome Back!</h2>
+                    <p>Ready to learn Java today? Let's make coding fun and easy!</p>
+                </div>
+
+                <div class="topics-grid">
+                    <div class="topic-item" onclick="navigate('intro')">
+                        <div class="topic-emoji">📚</div>
+                        <span>Introduction</span>
+                    </div>
+                    
+                    <div class="topic-item" onclick="navigate('syntax')">
+                        <div class="topic-emoji">✨</div>
+                        <span>Syntax</span>
+                    </div>
+                    
+                    <div class="topic-item" onclick="navigate('variables')">
+                        <div class="topic-emoji">📦</div>
+                        <span>Variables</span>
+                    </div>
+                    
+                    <div class="topic-item" onclick="navigate('datatypes')">
+                        <div class="topic-emoji">🔢</div>
+                        <span>Data Types</span>
+                    </div>
+                    
+                    <div class="topic-item" onclick="navigate('operators')">
+                        <div class="topic-emoji">➕</div>
+                        <span>Operators</span>
+                    </div>
+                    
+                    <div class="topic-item" onclick="navigate('conditions')">
+                        <div class="topic-emoji">🔀</div>
+                        <span>Conditions</span>
+                    </div>
+                    
+                    <div class="topic-item" onclick="navigate('loops')">
+                        <div class="topic-emoji">🔁</div>
+                        <span>Loops</span>
+                    </div>
+                    
+                    <div class="topic-item" onclick="navigate('arrays')">
+                        <div class="topic-emoji">📊</div>
+                        <span>Arrays</span>
+                    </div>
+                </div>
+
+                <div class="special-card" onclick="navigate('playground')">
+                    <div class="special-icon">💻✨</div>
+                    <div>
+                        <h3>Java IDE</h3>
+                        <p>Write and run real Java code!</p>
+                    </div>
+                </div>
+
+                <div class="credit-box">
+                    <p><strong>👩‍💻 Created by:</strong> Franchesca Daniel V. Navarro</p>
+                    <p><strong>📚 Section:</strong> WCS5M1-Sat-Sun</p>
+                    <p><strong>🎓 Subject:</strong> Apps Dev & Emerging Tech Lab</p>
+                    <p><strong>👨‍🏫 Professor:</strong> Prof. April Elca</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- INTRO PAGE -->
+        <div id="intro" class="page">
+            <div class="header-cute">
+                <div class="mascot">📚</div>
+                <h1>Introduction</h1>
+            </div>
+            
+            <div class="content">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="emoji">☕</span>
+                        <h2>What is Java?</h2>
+                    </div>
+                    <p>Java is a popular programming language! It's used to build apps, games, and websites. Created in 1995, it's now one of the most loved languages by developers worldwide! 🌍</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="emoji">💪</span>
+                        <h2>Why Learn Java?</h2>
+                    </div>
+                    <ul class="cute-list">
+                        <li>🌈 Works on any device (Windows, Mac, Android!)</li>
+                        <li>🎨 Object-oriented programming</li>
+                        <li>👥 Used by millions of developers</li>
+                        <li>📱 Powers all Android apps</li>
+                        <li>🚀 Perfect for beginners</li>
+                    </ul>
+                </div>
+
+                <div class="fun-fact">
+                    <span class="fact-emoji">✨</span>
+                    <div>
+                        <strong>Fun Fact!</strong>
+                        <p>Java is named after Java coffee! ☕ The creators were sipping coffee when they thought of the name. How cool is that?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SYNTAX PAGE -->
+        <div id="syntax" class="page">
+            <div class="header-cute">
+                <div class="mascot">✨</div>
+                <h1>Java Syntax</h1>
+            </div>
+            
+            <div class="content">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="emoji">👋</span>
+                        <h2>Your First Program!</h2>
+                    </div>
+                    <p>Let's write your very first Java program - the famous "Hello World!" 🎉</p>
+                    
+                    <div class="code-box">
+                        <pre><code>public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}</code></pre>
+                    </div>
+
+                    <div class="try-it">
+                        <div class="try-header">
+                            <span>✏️ Try it yourself!</span>
+                        </div>
+                        <textarea class="code-input" id="code-syntax">public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}</textarea>
+                        <button class="run-button" onclick="runCode('syntax')">▶️ Run Code</button>
+                        <div class="output-box" id="output-syntax">Click "Run Code" to see the magic! ✨</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="emoji">🔍</span>
+                        <h2>Understanding the Code</h2>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h3>📌 public class Main</h3>
+                        <p>This creates a class called "Main". Every Java program needs at least one class!</p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>📌 public static void main</h3>
+                        <p>This is where your program starts! Think of it as the "Start" button. 🎮</p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>📌 System.out.println()</h3>
+                        <p>This prints text to the screen. It's like telling your computer to say something!</p>
+                    </div>
+
+                    <div class="tip-box">
+                        <span class="tip-emoji">💡</span>
+                        <p><strong>Remember:</strong> Java is case-sensitive! "Main" is different from "main".</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VARIABLES PAGE -->
+        <div id="variables" class="page">
+            <div class="header-cute">
+                <div class="mascot">📦</div>
+                <h1>Variables</h1>
+            </div>
+            
+            <div class="content">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="emoji">🎁</span>
+                        <h2>What are Variables?</h2>
+                    </div>
+                    <p>Variables are like labeled boxes 📦 that store information! You can put different things in them and use them later.</p>
+
+                    <div class="code-box">
+                        <pre><code>int age = 15;
+String name = "Alex";
+double height = 5.5;
+boolean isHappy = true;</code></pre>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="emoji">📝</span>
+                        <h2>Creating Variables</h2>
+                    </div>
+                    <p>To create a variable, you need three things:</p>
+                    
+                    <div class="code-box">
+                        <pre><code>type name = value;</code></pre>
+                    </div>
+
+                    <p><strong>Example:</strong></p>
+                    <div class="code-box">
+                        <pre><code>int score = 100;
+String player = "Alex";
+System.out.println(player + " scored " + score);</code></pre>
+                    </div>
+
+                    <div class="try-it">
+                        <div class="try-header">
+                            <span>✏️ Try it yourself!</span>
+                        </div>
+                        <textarea class="code-input" id="code-variables">int score = 100;
+String player = "Alex";
+System.out.println(player + " scored " + score);</textarea>
+                        <button class="run-button" onclick="runCode('variables')">▶️ Run Code</button>
+                        <div class="output-box" id="output-variables">Click "Run Code" to see the magic! ✨</div>
+                    </div>
+
+                    <div class="tip-box">
+                        <span class="tip-emoji">💡</span>
+                        <p><strong>Tip:</strong> Use meaningful names! "playerScore" is better than just "x".</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DATA TYPES PAGE -->
+        <div id="datatypes" class="page">
+            <div class="header-cute">
+                <div class="mascot">🔢</div>
+                <h1>Data Types</h1>
+            </div>
+            
+            <div class="content">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="emoji">🎨</span>
+                        <h2>Types of Data</h2>
+                    </div>
+                    <p>Java has different types for different kinds of information! 🌈</p>
+
+                    <div class="type-item">
+                        <strong>🔢 int</strong> - Whole numbers
+                        <div class="code-box mini">
+                            <code>int age = 15;</code>
+                        </div>
+                    </div>
+
+                    <div class="type-item">
+                        <strong>💰 double</strong> - Decimal numbers
+                        <div class="code-box mini">
+                            <code>double price = 9.99;</code>
+                        </div>
+                    </div>
+
+                    <div class="type-item">
+                        <strong>✅ boolean</strong> - True or False
+                        <div class="code-box mini">
+                            <code>boolean isAwesome = true;</code>
+                        </div>
+                    </div>
+
+                    <div class="type-item">
+                        <strong>🔤 char</strong> - Single character
+                        <div class="code-box mini">
+                            <code>char grade = 'A';</code>
+                        </div>
+                    </div>
+
+                    <div class="type-item">
+                        <strong>📝 String</strong> - Text
+                        <div class="code-box mini">
+                            <code>String message = "Hello!";</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="emoji">✨</span>
+                        <h2>All Together Now!</h2>
+                    </div>
+
+                    <div class="code-box">
+                        <pre><code>int age = 20;
+String name = "Alex";
+double height = 5.9;
+boolean isStudent = true;
+char grade = 'A';</code></pre>
+                    </div>
+
+                    <div class="try-it">
+                        <div class="try-header">
+                            <span>✏️ Try it yourself!</span>
+                        </div>
+                        <textarea class="code-input" id="code-datatypes">int age = 20;
+String name = "Alex";
+System.out.println("Name: " + name);
+System.out.println("Age: " + age);</textarea>
+                        <button class="run-button" onclick="runCode('datatypes')">▶️ Run Code</button>
+                        <div class="output-box" id="output-datatypes">Click "Run Code" to see the magic! ✨</div>
+                    </div>
+
+                    <div class="tip-box">
+                        <span class="tip-emoji">💡</span>
+                        <p><strong>Remember:</strong> String uses "double quotes" but char uses 'single quotes'!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OPERATORS PAGE -->
+        <div id="operators" class="page">
+            <div class="header-cute">
+                <div class="mascot">➕</div>
+                <h1>Operators</h1>
+            </div>
+            
+            <div class="content">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="emoji">🧮</span>
+                        <h2>Math Operators</h2>
+                    </div>
+                    <p>Do math operations like a calculator! 🎯</p>
+
+                    <div class="code-box">
+                        <pre><code>int a = 10 + 5;   // Addition = 15
+int b = 10 - 5;   // Subtraction = 5
+int c = 10 * 5;   // Multiplication = 50
+int d = 10 / 5;   // Division = 2
+int e = 10 % 3;   // Remainder = 1</code></pre>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="emoji">⚖️</span>
+                        <h2>Comparison Operators</h2>
+                    </div>
+                    <p>Compare two things and get true or false!</p>
+
+                    <div class="code-box">
+                        <pre><code>5 == 5    // Equal? true ✅
+5 != 3    // Not equal? true ✅
+5 > 3     // Greater? true ✅
+5 < 3     // Less? false ❌
+5 >= 5    // Greater or equal? true ✅</code></pre>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="emoji">🔗</span>
+                        <h2>Logical Operators</h2>
+                    </div>
+
+                    <div class="code-box">
+                        <pre><code>&& - AND (both must be true)
+|| - OR (at least one true)
+!  - NOT (opposite)</code></pre>
+                    </div>
+
+                    <div class="try-it">
+                        <div class="try-header">
+                            <span>✏️ Try it yourself!</span>
+                        </div>
+                        <textarea class="code-input" id="code-operators">int x = 10;
+int y = 5;
+System.out.println("Sum: " + (x + y));
+System.out.println("Difference: " + (x - y));
+System.out.println("Product: " + (x * y));</textarea>
+                        <button class="run-button" onclick="runCode('operators')">▶️ Run Code</button>
+                        <div class="output-box" id="output-operators">Click "Run Code" to see the magic! ✨</div>
+                    </div>
+
+                    <div class="tip-box">
+                        <span class="tip-emoji">💡</span>
+                        <p><strong>Important:</strong> Use == to compare, use = to assign!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONDITIONS PAGE -->
+        <div id="conditions" class="page">
+            <div class="header-cute">
+                <div class="mascot">🔀</div>
+                <h1>Conditions</h1>
+            </div>
+            
+            <div class="content">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="emoji">🤔</span>
+                        <h2>Make Decisions!</h2>
+                    </div>
+                    <p>Use if-else to make your program smart! It can decide what to do! 🧠</p>
+
+                    <div class="code-box">
+                        <pre><code>int score = 85;
+
+if (score >= 90) {
+    System.out.println("A grade! 🌟");
+} else if (score >= 80) {
+    System.out.println("B grade! 👍");
+} else {
+    System.out.println("Keep trying! 💪");
+}</code></pre>
+                    </div>
+
+                    <div class="try-it">
+                        <div class="try-header">
+                            <span>✏️ Try changing the score!</span>
+                        </div>
+                        <textarea class="code-input" id="code-conditions">int score = 85;
+if (score >= 90) {
+    System.out.println("A grade!");
+} else if (score >= 80) {
+    System.out.println("B grade!");
+} else {
+    System.out.println("Keep trying!");
+}</textarea>
+                        <button class="run-button" onclick="runCode('conditions')">▶️ Run Code</button>
+                        <div class="output-box" id="output-conditions">Click "Run Code" to see the magic! ✨</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="emoji">⚡</span>
+                        <h2>Ternary Operator</h2>
+                    </div>
+                    <p>A super quick way to write if-else in one line! 🚀</p>
+
+                    <div class="code-box">
+                        <pre><code>int age = 18;
+String status = (age >= 18) ? "Adult" : "Minor";
+System.out.println(status);</code></pre>
+                    </div>
+
+                    <div class="tip-box">
+                        <span class="tip-emoji">💡</span>
+                        <p><strong>Pro Tip:</strong> You can put if statements inside other if statements!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LOOPS PAGE -->
+        <div id="loops" class="page">
+            <div class="header-cute">
+                <div class="mascot">🔁</div>
+                <h1>Loops</h1>
+            </div>
+            
+            <div class="content">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="emoji">🔄</span>
+                        <h2>For Loop</h2>
+                    </div>
+                    <p>Repeat code a specific number of times! Perfect for counting! 🔢</p>
+
+                    <div class="code-box">
+                        <pre><code>for (int i = 1; i <= 5; i++) {
+    System.out.println("Count: " + i);
+}</code></pre>
+                    </div>
+
+                    <div class="try-it">
+                        <div class="try-header">
+                            <span>✏️ Try it yourself!</span>
+                        </div>
+                        <textarea class="code-input" id="code-loops">for (int i = 1; i <= 5; i++) {
+    System.out.println("Count: " + i);
+}</textarea>
+                        <button class="run-button" onclick="runCode('loops')">▶️ Run Code</button>
+                        <div class="output-box" id="output-loops">Click "Run Code" to see the magic! ✨</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="emoji">⏰</span>
+                        <h2>While Loop</h2>
+                    </div>
+                    <p>Keep repeating while something is true! ♾️</p>
+
+                    <div class="code-box">
+                        <pre><code>int i = 0;
+while (i < 5) {
+    System.out.println("Count: " + i);
+    i++;
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="emoji">🎯</span>
+                        <h2>Do-While Loop</h2>
+                    </div>
+                    <p>Do something first, then check if you should repeat!</p>
+
+                    <div class="code-box">
+                        <pre><code>int i = 0;
+do {
+    System.out.println("Count: " + i);
+    i++;
+} while (i < 5);</code></pre>
+                    </div>
+
+                    <div class="tip-box">
+                        <span class="tip-emoji">💡</span>
+                        <p><strong>Cool Tricks:</strong> Use "break" to stop early, "continue" to skip ahead!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ARRAYS PAGE -->
+        <div id="arrays" class="page">
+            <div class="header-cute">
+                <div class="mascot">📊</div>
+                <h1>Arrays</h1>
+            </div>
+            
+            <div class="content">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="emoji">📚</span>
+                        <h2>What are Arrays?</h2>
+                    </div>
+                    <p>Arrays store multiple items in one variable! Like a shopping list! 🛒</p>
+
+                    <div class="code-box">
+                        <pre><code>String[] fruits = {"Apple", "Banana", "Orange"};
+int[] numbers = {1, 2, 3, 4, 5};</code></pre>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="emoji">🔢</span>
+                        <h2>Accessing Items</h2>
+                    </div>
+                    <p>Each item has an index (position) starting from 0!</p>
+
+                    <div class="code-box">
+                        <pre><code>String[] cars = {"Volvo", "BMW", "Ford"};
+System.out.println(cars[0]);  // Volvo
+System.out.println(cars[1]);  // BMW
+System.out.println(cars[2]);  // Ford</code></pre>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="emoji">🔄</span>
+                        <h2>Loop Through Arrays</h2>
+                    </div>
+
+                    <div class="code-box">
+                        <pre><code>String[] fruits = {"Apple", "Banana", "Orange"};
+for (int i = 0; i < fruits.length; i++) {
+    System.out.println(fruits[i]);
+}</code></pre>
+                    </div>
+
+                    <div class="try-it">
+                        <div class="try-header">
+                            <span>✏️ Try it yourself!</span>
+                        </div>
+                        <textarea class="code-input" id="code-arrays">String[] fruits = {"Apple", "Banana", "Orange"};
+for (int i = 0; i < fruits.length; i++) {
+    System.out.println(fruits[i]);
+}</textarea>
+                        <button class="run-button" onclick="runCode('arrays')">▶️ Run Code</button>
+                        <div class="output-box" id="output-arrays">Click "Run Code" to see the magic! ✨</div>
+                    </div>
+
+                    <div class="tip-box">
+                        <span class="tip-emoji">💡</span>
+                        <p><strong>Remember:</strong> Arrays start at 0! The first item is array[0], not array[1]!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PLAYGROUND PAGE -->
+        <div id="playground" class="page">
+            <div class="header-cute">
+                <div class="mascot">💻</div>
+                <h1>Java IDE</h1>
+            </div>
+            
+            <div class="content">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="emoji">🎮</span>
+                        <h2>Code Your Own Program!</h2>
+                    </div>
+                    <p>Write any Java code and run it! Try creating variables, using loops, or anything you learned! 🚀</p>
+
+                    <div class="example-buttons">
+                        <button class="example-btn" onclick="loadExample('hello')">Hello World</button>
+                        <button class="example-btn" onclick="loadExample('math')">Math Fun</button>
+                        <button class="example-btn" onclick="loadExample('loop')">Loop Example</button>
+                        <button class="example-btn" onclick="loadExample('array')">Array Example</button>
+                    </div>
+
+                    <div class="playground-editor">
+                        <div class="editor-header">
+                            <span>✏️ Main.java</span>
+                            <button class="clear-btn" onclick="clearPlayground()">🗑️ Clear</button>
+                        </div>
+                        <textarea class="playground-input" id="playground-code">public class Main {
+    public static void main(String[] args) {
+        System.out.println("Write your code here!");
+    }
+}</textarea>
+                        <button class="run-button large" onclick="runPlayground()">▶️ Run My Code!</button>
+                        <div class="output-box large" id="playground-output">Your output will appear here! ✨</div>
+                    </div>
+
+                    <div class="tip-box">
+                        <span class="tip-emoji">🌟</span>
+                        <p><strong>Challenge:</strong> Can you make a program that prints your name 5 times? Try it!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVIGATION BAR -->
+        <div class="nav-bar">
+            <button class="nav-button" onclick="goHome()" id="homeBtn">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">Home</span>
+            </button>
+            <button class="nav-button" onclick="goPrevious()" id="prevBtn">
+                <span class="nav-icon">←</span>
+                <span class="nav-label">Back</span>
+            </button>
+            <button class="nav-button" onclick="goNext()" id="nextBtn">
+                <span class="nav-icon">→</span>
+                <span class="nav-label">Next</span>
+            </button>
+        </div>
+
+    </div>
+
+    <script src="java_js.js"></script>
+</body>
+</html>
